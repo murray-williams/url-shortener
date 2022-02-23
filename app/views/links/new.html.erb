@@ -1,0 +1,15 @@
+<form action='/links' method='post' accept-charset="UTF-8">
+  <label for='long_url'>URL<label>
+  <input type="text" id="long_url" name="link[long_url]"> <br>
+  <label for='slug'>Slug<label>
+  <input type="text" id="slug" name="link[slug]"> <br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>" >
+
+  <input type="submit" value="Submit">
+</form>
+<p>
+<% if params %>
+  <%= link_to params[:slug], params[:url], target: :_blank %>
+<% end %>
+</p>
