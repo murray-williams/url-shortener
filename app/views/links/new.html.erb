@@ -15,7 +15,7 @@
     <p class="mt-5 mb-3 text-muted text-center">
       <% if params[:short_url] %>
         <span>Your shortened URL is:</span><br>
-        <%= link_to params[:short_url], params[:url], target: :_blank %>
+        <%= link_to params[:short_url], params[:long_url], target: :_blank %>
       <% end %>
     </p>
   </form>
